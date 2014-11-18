@@ -1,0 +1,33 @@
+<% @customers.each do |customer| %>
+
+  <section>
+    <div id="options">
+      <%= link_to 'x', customers_path %>
+      <%= link_to 'edit', edit_customer_path(customer.id) %>
+    </div>
+    <p>
+      <b>Full name:</b>
+      <%= customer.full_name %>
+    </p>
+    
+    <p>
+      <b>Phone:</b>
+      <%= customer.phone %>
+    </p>
+    
+    <p>
+      <b>Email:</b>
+      <%= customer.email %>
+    </p>
+    
+    <p>
+      <%= image_tag customer.image %>
+    </p>
+    
+    <p>
+      <b>Notes:</b>
+      <%= customer.notes %>
+    </p>
+  </section>
+  
+<% end %>
